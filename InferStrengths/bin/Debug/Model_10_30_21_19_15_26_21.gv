@@ -1,0 +1,42 @@
+digraph Model
+{
+    node [ fontsize=8, style="filled, rounded", fillcolor=transparent ];
+
+    node0 [ label="strengths[winners[gameIDsRange]]" fontsize="10" fontcolor="#0000FF" shape="box" ];
+    node1 [ label="GaussianFromMeanAndVariance" fontsize="8" fontcolor="#FFFFFF" fillcolor="#000000" shape="box" ];
+    node2 [ label="400" fontsize="9" fontcolor="#000000" shape="none" ];
+    node3 [ label="winPerf[gameIDsRange]" fontsize="10" fontcolor="#0000FF" shape="box" ];
+    node4 [ label="strengths[losers[gameIDsRange]]" fontsize="10" fontcolor="#0000FF" shape="box" ];
+    node5 [ label="GaussianFromMeanAndVariance" fontsize="8" fontcolor="#FFFFFF" fillcolor="#000000" shape="box" ];
+    node6 [ label="400" fontsize="9" fontcolor="#000000" shape="none" ];
+    node7 [ label="losePerf[gameIDsRange]" fontsize="10" fontcolor="#0000FF" shape="box" ];
+    node8 [ label="Minus" fontsize="8" fontcolor="#FFFFFF" fillcolor="#000000" shape="box" ];
+    node9 [ label="vdouble12[gameIDsRange]" fontsize="10" fontcolor="#0000FF" shape="box" ];
+    node10 [ label="IsPositive" fontsize="8" fontcolor="#FFFFFF" fillcolor="#000000" shape="box" ];
+    node11 [ label="vbool0[gameIDsRange]" fontsize="10" fontcolor="#0000FF" shape="box" ];
+    node12 [ label="True" fontsize="9" fontcolor="#000000" shape="none" ];
+    node13 [ label="Equal" fontsize="8" fontcolor="#FFFFFF" fillcolor="#000000" shape="box" ];
+    node14 [ label="2000" fontsize="9" fontcolor="#000000" shape="none" ];
+    node15 [ label="GaussianFromMeanAndVariance" fontsize="8" fontcolor="#FFFFFF" fillcolor="#000000" shape="box" ];
+    node16 [ label="40000" fontsize="9" fontcolor="#000000" shape="none" ];
+    node17 [ label="strengths[teamsIDRange]" fontsize="10" fontcolor="#0000FF" shape="box" ];
+
+    node0 -> node1 [ label="mean" fontsize="8" fontcolor="#D3D3D3" arrowtail="none" ];
+    node2 -> node1 [ label="variance" fontsize="8" fontcolor="#D3D3D3" arrowtail="none" ];
+    node1 -> node3 [ label="" fontsize="8" fontcolor="#D3D3D3" arrowtail="none" ];
+    node4 -> node5 [ label="mean" fontsize="8" fontcolor="#D3D3D3" arrowtail="none" ];
+    node6 -> node5 [ label="variance" fontsize="8" fontcolor="#D3D3D3" arrowtail="none" ];
+    node5 -> node7 [ label="" fontsize="8" fontcolor="#D3D3D3" arrowtail="none" ];
+    node3 -> node8 [ label="a" fontsize="8" fontcolor="#D3D3D3" arrowtail="none" ];
+    node7 -> node8 [ label="b" fontsize="8" fontcolor="#D3D3D3" arrowtail="none" ];
+    node8 -> node9 [ label="" fontsize="8" fontcolor="#D3D3D3" arrowtail="none" ];
+    node9 -> node10 [ label="x" fontsize="8" fontcolor="#D3D3D3" arrowtail="none" ];
+    node10 -> node11 [ label="" fontsize="8" fontcolor="#D3D3D3" arrowtail="none" ];
+    node12 -> node13 [ label="A" fontsize="8" fontcolor="#D3D3D3" arrowtail="none" ];
+    node11 -> node13 [ label="B" fontsize="8" fontcolor="#D3D3D3" arrowtail="none" ];
+    node14 -> node15 [ label="mean" fontsize="8" fontcolor="#D3D3D3" arrowtail="none" ];
+    node16 -> node15 [ label="variance" fontsize="8" fontcolor="#D3D3D3" arrowtail="none" ];
+    node15 -> node17 [ label="" fontsize="8" fontcolor="#D3D3D3" arrowtail="none" ];
+    node17 -> node0 [ arrowtail="none" arrowhead="none" ];
+    node17 -> node4 [ arrowtail="none" arrowhead="none" ];
+}
